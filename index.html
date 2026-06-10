@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculate your obligatory Zakat accurately with real-time Gold and Silver prices in INR. Premium interactive calculator.">
+    <meta name="author" content="Arif Khan">
+    <title>Zakat Calculator | Premium Edition</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="top-banner">
+        <div class="developer-badge">
+            <span class="sparkle">✨</span> Designed & Developed by <span class="animated-name">Arif Khan</span>
+        </div>
+    </div>
+
+    <main class="calculator-container fade-in">
+        <header class="header">
+            <h1>Zakat Calculator</h1>
+            <p>Accurate, real-time calculations based on Indian market rates.</p>
+        </header>
+
+        <div class="live-rates slide-up">
+            <div class="rate-status">
+                <span id="sync-icon">🔄</span> Live Rates (INR):
+            </div>
+            <div class="rate-values">
+                <span>Gold: ₹<span id="live-gold">Loading...</span>/g</span>
+                <span>Silver: ₹<span id="live-silver">Loading...</span>/g</span>
+            </div>
+        </div>
+
+        <div class="grid-layout">
+            <section class="card slide-up delay-1">
+                <h2>1. Zakatable Assets</h2>
+                <div class="input-group">
+                    <label for="cash">Cash in Hand & Bank (₹)</label>
+                    <input type="number" id="cash" placeholder="0" min="0">
+                </div>
+                <div class="input-group">
+                    <label for="gold">Gold Owned (Grams)</label>
+                    <input type="number" id="gold" placeholder="0" min="0">
+                    <small>Value: <span id="gold-value" class="gold-text">₹0</span></small>
+                </div>
+                <div class="input-group">
+                    <label for="silver">Silver Owned (Grams)</label>
+                    <input type="number" id="silver" placeholder="0" min="0">
+                    <small>Value: <span id="silver-value">₹0</span></small>
+                </div>
+                <div class="input-group">
+                    <label for="investments">Investments & Shares (₹)</label>
+                    <input type="number" id="investments" placeholder="0" min="0">
+                </div>
+            </section>
+
+            <div class="right-column">
+                <section class="card slide-up delay-2">
+                    <h2>2. Deductible Liabilities</h2>
+                    <div class="input-group">
+                        <label for="debts">Outstanding Debts/Loans (₹)</label>
+                        <input type="number" id="debts" placeholder="0" min="0">
+                    </div>
+                    <div class="input-group">
+                        <label for="bills">Immediate Unpaid Bills (₹)</label>
+                        <input type="number" id="bills" placeholder="0" min="0">
+                    </div>
+                </section>
+
+                <div class="action-buttons slide-up delay-3">
+                    <button id="calc-btn" class="btn btn-primary">Calculate Zakat</button>
+                    <button id="reset-btn" class="btn btn-secondary">Reset</button>
+                </div>
+
+                <section class="card result-card slide-up delay-3">
+                    <h2>3. Zakat Summary</h2>
+                    <div class="summary-details">
+                        <div class="summary-row">
+                            <span>Total Assets:</span>
+                            <span id="total-assets">₹0</span>
+                        </div>
+                        <div class="summary-row text-red">
+                            <span>Total Liabilities:</span>
+                            <span id="total-liabilities">- ₹0</span>
+                        </div>
+                        <div class="summary-row net-wealth-row">
+                            <span>Net Wealth:</span>
+                            <span id="net-wealth">₹0</span>
+                        </div>
+                    </div>
+
+                    <div class="final-result">
+                        <p id="zakat-status">Enter values to check eligibility.</p>
+                        <p class="zakat-label">Total Zakat Payable (2.5%)</p>
+                        <h3 id="zakat-amount" class="pulse">₹0.00</h3>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
